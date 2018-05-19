@@ -1,0 +1,309 @@
+
+// Variable 
+$text-2: #666
+$text-1: #333
+$place-holder: #999
+$check-color: #00aeef
+
+@keyframes fade   
+  0% 
+    opacity: 0 
+  100% 
+    opacity: 1
+.popup 
+  display: none 
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 9999
+  .over-play
+    position: fixed
+    top: 50%
+    left: 0
+    transform: translateY(-50%)
+    -ms-transform: translateY(-50%)
+    -webkit-transform: translateY(-50%)
+    -moz-transform: translateY(-50%)
+    width: 100%
+    .popup-form
+      background: #fff
+      width: 100%
+      max-width: 580px 
+      margin-left: auto
+      margin-right: auto
+      padding: 30px
+      box-sizing: border-box
+      position: relative
+      .close-popup 
+        position: absolute
+        top: 5px 
+        right: 10px
+        cursor: pointer
+      .des-form 
+        p 
+          color: $text-1
+          font-size: 16px
+          margin-top: 0
+          margin-bottom: 15px
+      .check-input 
+        margin-bottom: 15px
+        position: relative
+        &:after 
+          display: table
+          content: " "
+          clear: both
+        p 
+          color: $text-1
+          margin-top: 0 
+          margin-bottom: 15px
+        > div 
+          float: left 
+          margin-right: 60px
+          position: relative
+          input 
+            margin: 0 10px 0 8px
+            opacity: 0
+            &:checked + label
+              &:after 
+                opacity: 1
+                z-index: 2
+          label
+            font-weight: 400
+            margin-bottom: 0
+            cursor: pointer
+            &:before 
+              width: 24px 
+              height: 24px
+              border-radius: 50%
+              background: $check-color
+              display: block
+              content: " "
+              position: absolute
+              top: 50%
+              left: 0
+              transform: translateY(-50%)
+              -webkit-transform: translateY(-50%)
+              -ms-transform: translateY(-50%) 
+              -moz-transform: translateY(-50%)
+              cursor: pointer
+              z-index: 1
+            &:after 
+              position: absolute
+              top: 50%
+              left: 7px
+              display: block 
+              width: 10px 
+              height: 10px
+              opacity: 0
+              background: #fff
+              cursor: pointer
+              z-index: 0
+              content: " "
+              border-radius: 100%
+              transform: translateY(-50%)
+              -ms-transform: translateY(-50%)
+              -webkit-transform: translateY(-50%)
+              -o-transform: translateY(-50%)
+            
+      .my-input 
+        margin-bottom: 15px
+        input, select
+          border: 1px solid #acacac
+          border-radius: 5px
+          width: 100%  
+          padding: 10px 15px
+          font-size: 16px
+          color: $text-1
+          box-sizing: border-box
+          &:focus 
+            outline: none
+      .last-check 
+        margin-top: 10px
+        margin-bottom: 20px
+        position: relative
+        &:after 
+          clear: both 
+          display: table 
+          content: " "
+        > div 
+          float: left
+          width: 17px
+          height: 17px
+          position: relative
+          &.alert-box
+            width: 100%
+            height: auto
+            top: 30%
+            &:before
+              display: none
+          &:before 
+            width: 17px 
+            height: 17px
+            background: $check-color
+            content: " "
+            display: block
+            position: absolute
+            top: 0
+            left: 0
+            cursor: pointer
+            z-index: 1
+          input 
+            opacity: 0
+            margin: 0    
+            &:checked + label 
+              opacity: 1
+          label 
+            position: absolute
+            top: 50%
+            left: 50%
+            opacity: 0
+            cursor: pointer
+            transform: translate(-50%,-50%)
+            -webkit-transform: translate(-50%,-50%)
+            -moz-transform: translate(-50%,-50%)
+            -ms-transform: translate(-50%,-50%) 
+            color: #fff
+            width: 17px 
+            height: 17px
+            font-size: 14px
+            z-index: 2
+            text-align: center
+            display: block
+            i 
+              width: 17px 
+              height: 17px
+              display: block
+        p 
+          float: right
+          max-width: 490px
+          margin-top: 0 
+          margin-bottom: 0
+          color: $text-2
+          cursor: pointer
+      .submit-button 
+        button 
+          line-height: 50px 
+          width: 100%
+          background: $check-color
+          font-size: 20px
+          border-radius: 5px
+          border: none
+          color: #fff 
+          text-transform: uppercase
+          cursor: pointer
+          transition: all 0.3s
+          &:hover 
+            background: $check-color * 0.5
+      ::-webkit-input-placeholder  
+        color: $place-holder
+      
+      :-moz-placeholder 
+        color: $place-holder
+      
+      ::-moz-placeholder 
+        color: $place-holder
+
+      :-ms-input-placeholder 
+        color: $place-holder
+      select
+        &:invalid
+          color: $place-holder !important
+        option 
+          color: $place-holder
+  &.active 
+    display: block 
+    background: rgba(0,0,0,0.8)
+    animation: fade 0.3s
+    -webkit-animation: fade 0.3s
+    -moz-animation: fade 0.3s
+@media screen and (max-width: 767px)
+  .popup 
+    .over-play
+      .popup-form 
+        padding: 10px 15px
+        font-size: 14px
+        .des-form 
+          p
+            display: none
+        .check-input  
+          margin-bottom: 10px
+          p 
+            margin-bottom: 5px
+          > div
+            margin-right: 30px
+            label
+              &:before 
+                width: 20px 
+                height: 20px
+              &:after 
+                width: 7px 
+                height: 7px
+            p 
+              margin-bottom: 10px
+        .my-input 
+          margin-bottom: 5px
+          input, select
+            font-size: 14px
+            padding: 6px 10px
+        .submit-button 
+          button
+            font-size: 16px
+            line-height: 40px
+        .last-check
+          margin-bottom: 10px
+          margin-top: 5px
+          > div
+            float: none
+            margin: auto
+            margin-bottom: 5px
+            input
+              &:before 
+                width: 20px 
+                height: 20px
+          p 
+            float: none
+            max-width: none
+            text-align: center
+.alert-box
+  position: absolute !important
+  z-index: 999 !important
+  top: 100%
+  margin-top: 15px
+  margin-left: -10px
+  display: none
+  &.active-box
+    display: block !important
+  &.box-3 
+    margin-left: -20px
+  .arrow_box 
+    position: relative
+    background: #ececec
+    border: 1px solid #ececec
+    font-size: 14px
+    padding: 10px 15px
+    border-radius: 2px
+    i 
+      font-size: 16px 
+      color: rgb(224, 95, 0)
+      margin-right: 8px
+    &:after, &:before 
+      bottom: 100%
+      left: 20%
+      border: solid transparent
+      content: " "
+      height: 0
+      width: 0
+      position: absolute
+      pointer-events: none
+    &:after 
+      border-color: rgba(236, 236, 236, 0)
+      border-bottom-color: #ececec
+      border-width: 5px
+      margin-left: -5px
+    &:before
+      border-color: rgba(236, 236, 236, 0)
+      border-bottom-color: #ececec
+      border-width: 6px
+      margin-left: -6px

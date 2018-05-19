@@ -1,0 +1,644 @@
+// Import bootstrap
+@import "../vendor/bootstrap-sass-3.3.7/css/_bootstrap.scss"
+@import "popup.sass"
+// Font
+@font-face 
+  font-family: roboto-black
+  src: url("../fonts/roboto/Roboto-Black.ttf")
+
+@font-face 
+  font-family: roboto-light
+  src: url("../fonts/roboto/Roboto-Light.ttf")
+
+// Variable 
+$text-color: #000
+$text-banner: #fff 
+$text-title: #00bfff
+$hot-line: #fefb00
+$extra-button: #f8c731
+
+// Extend
+.center 
+  top: 50%
+  left: 50%
+  position: absolute
+  -webkit-transform: translate(-50%,-50%)
+  -moz-transform: translate(-50%,-50%)
+  -ms-transform: translate(-50%,-50%)
+  transform: translate(-50%,-50%)
+
+// My css
+html 
+  font-size: 16px
+body 
+  font-size: 1rem
+  font-family: 'Roboto', sans-serif
+  color: $text-color
+.fix-padding
+  @media screen and (min-width: 1200px)
+    padding-left: 0
+    padding-right: 0
+.over 
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+// HEADER CSS
+#header 
+  background: url("../images/bg.png") no-repeat
+  background-size: cover 
+  background-position: top center
+  height: 100vh
+  max-height: 950px
+  position: relative
+  @media screen and (min-width: 1200px)
+    min-height: 768px
+  .navigation 
+    position: relative
+    z-index: 2
+    .logo
+      float: left
+      margin-top: 25px
+    .hot-line
+      float: right
+      color: $hot-line
+      margin-top: 55px
+      font-size: 1.25rem
+  .title-banner
+    color: $text-banner
+    text-align: center
+    max-width: 1000px
+    width: 100%
+    z-index: 3
+    margin-top: 20px
+    @extend .center
+    h2 
+      font-size: 4.3125rem
+      text-transform: uppercase
+      font-family: roboto-black
+      margin-bottom: 30px
+    h3 
+      font-size: 2.125rem
+      text-transform: uppercase
+      font-family: roboto-black
+      margin-bottom: 40px
+    p 
+      font-size: 1.25rem
+      margin-bottom: 45px
+    a
+      font-size: 1.125rem
+      color: $text-banner
+      display: inline-block
+      height: 56px 
+      width: 258px
+      background: $text-title
+      line-height: 56px
+      border-radius: 35px
+      border: 1px solid transparent
+      transition: all 0.3s
+      font-weight: 700
+      &:hover 
+        border: 1px solid $text-title
+        color: $text-title
+        background: transparent
+  .over 
+    background: rgba(0,0,0,0.6)
+    z-index: 1
+// END HEADER CSS
+
+// MAIN CSS 
+.module 
+  padding-top: 40px
+  .title-module
+    text-align: center
+    margin-bottom: 40px
+    h3,h4 
+      font-size: 1.875rem
+    h3 
+      text-transform: uppercase
+      color: $text-title
+      font-family: roboto-black
+      margin-bottom: 5px
+    h4,p  
+      font-family: roboto-light
+    p 
+      font-size: 1.25rem
+      margin-top: 40px
+  .tab-list 
+    background: #363636
+    .nav
+      border: none
+      li  
+        margin: 0
+        &.active 
+          a
+            background: $text-title
+        a 
+          transition: all 0.3s
+          border-radius: 0
+          border: none
+          color: $text-banner
+          font-family: roboto-black
+          text-align: center
+          text-transform: uppercase
+          line-height: 75px
+          padding: 0
+          margin: 0
+          &:hover 
+            background: $text-title
+  .content 
+    margin-top: 45px
+    margin-bottom: 40px
+    .image-card 
+      text-align: center
+      p 
+        color: #666666
+        font-family: roboto-black
+        text-transform: uppercase
+        margin-top: 30px
+    .des-card 
+      margin-top: 25px
+      > div 
+        position: relative
+        margin-bottom: 30px
+        &:last-child 
+          margin-bottom: 45px
+        i 
+          color: $text-title
+          position: absolute
+          left: 0 
+          top: 2px
+          font-size: 1.25rem
+        span 
+          font-family: roboto-light
+          color: #666666
+          margin-left: 35px
+          display: block
+      > button 
+        display: inline-block
+        width: 170px
+        height: 48px
+        line-height: 48px
+        color: $text-banner
+        font-family: roboto-black
+        text-transform: uppercase
+        text-align: center
+        border-radius: 5px
+        background: $text-title
+        border: 1px solid transparent
+        transition: all 0.3s
+        &:hover 
+          background: transparent
+          border: 1px solid $text-title
+          color: $text-title
+  .content-module
+    text-align: center
+    figure 
+      img 
+        display: inline-block
+    p 
+      font-family: roboto-light
+      font-size: 1.25rem
+      margin-top: 75px
+  &.module-2
+    background: #f5f5f5
+    padding-top: 30px 
+    padding-bottom: 50px
+    .title-module
+      margin-bottom: 56px
+    .content-card 
+      .gains 
+        >div  
+          margin-bottom: 60px
+          &:last-child
+            margin-bottom: 0
+          .des-gain 
+            font-family: roboto-light
+            min-height: 66px
+            p 
+              @extend .center
+              width: 100%
+      .left-content
+        .gains
+          .des-gain
+            text-align: right
+            p 
+              padding-right: 15px
+      .right-content
+        .gains
+          .des-gain
+            p 
+              padding-left: 15px
+      .center-content 
+        text-align: center
+        padding-top: 11px
+        img 
+          display: inline-block
+  &.module-3 
+    padding-top: 45px
+    padding-bottom: 43px
+    .title-module
+      margin-bottom: 50px
+  &.module-4
+    background: url('../images/bg-module-4.png') no-repeat
+    background-size: cover
+    padding-bottom: 35px
+    .title-module
+      h3,h4
+        color: $text-banner
+    .content-module
+      p 
+        color: $text-banner
+        font-size: 1.0625rem 
+        margin-top: 20px
+      > button 
+        font-size: 1.25rem
+        font-family: roboto-black
+        display: inline-block
+        width: 225px 
+        height: 70px 
+        line-height: 70px
+        text-align: center
+        background: $extra-button
+        border-radius: 10px
+        text-transform: uppercase
+        color: $text-banner
+        box-shadow: 0 5px 0 0 #f08218
+        margin-top: 35px
+        border: 1px solid transparent
+        transition: all 0.3s
+        &:hover 
+          background: #f08218
+          box-shadow: none
+  &.module-5
+    padding-top: 55px
+    padding-bottom: 90px
+    .content-module
+      .step
+        font-family: roboto-light
+        &:first-child 
+          @media screen and (min-width: 1200px)
+            padding: 0 5px
+          h5 
+            &:after
+              width: 50%
+              right: 0
+              transform: translateX(0%)
+              -ms-transform: translateX(0%)
+              -moz-transform: translateX(0%)
+              -webkit-transform: translateX(0%)
+        &:last-child 
+          h5 
+            &:after
+              width: 50%
+              left: 0
+              transform: translateX(0%)
+              -ms-transform: translateX(0%)
+              -moz-transform: translateX(0%)
+              -webkit-transform: translateX(0%)
+        h5 
+          font-size: 1.0625rem
+          &:before,&:after 
+            display: block
+            position: absolute
+            content: " "
+          &:before 
+            width: 28px 
+            height: 28px
+            background: $text-title
+            border-radius: 50%
+            top: 33px
+            left: 50%
+            transform: translateX(-50%)
+            -ms-transform: translateX(-50%)
+            -moz-transform: translateX(-50%)
+            -webkit-transform: translateX(-50%)
+            z-index: 2
+          &:after 
+            border: 4px solid #999999
+            width: 110%
+            top: 42px
+            z-index: 1
+            left: 50%
+            transform: translateX(-50%)
+            -ms-transform: translateX(-50%)
+            -moz-transform: translateX(-50%)
+            -webkit-transform: translateX(-50%)
+        > div 
+          margin-top: 70px
+          p 
+            margin-top: 0
+            font-size: 0.9375rem
+// END MAIN CSS 
+
+// FOOTER CSS 
+#footer 
+  text-align: center
+  .top-footer 
+    background: #333333
+    padding-top: 60px 
+    padding-bottom: 65px
+    .title-footer 
+      max-width: 830px
+      display: inline-block
+      h3 
+        font-family: roboto-black
+        font-size: 1.75rem
+        color: $text-banner
+        margin-bottom: 55px
+        span 
+          color: $text-title
+      p 
+        font-family: roboto-light
+        font-size: 1.25rem
+        color: $text-banner
+      .button-group 
+        margin-top: 48px
+        a, button
+          display: inline-block
+          width: 190px
+          height: 60px
+          line-height: 60px
+          border-radius: 10px
+          font-family: roboto-black
+          text-transform: uppercase
+          border: 1px solid transparent
+          transition: all 0.3s
+          margin: 0 8px
+        button 
+          background: $text-title
+          color: $text-banner
+          &:hover 
+            border: 1px solid $text-title
+            background: transparent
+            color: $text-title
+        a 
+          background: $text-banner
+          color: $text-title
+          &:hover 
+            border: 1px solid $text-banner
+            color: $text-banner
+            background: transparent
+  .bot-footer 
+    background: #666666
+    font-family: roboto-light
+    color: $text-banner
+    font-size: 0.875rem
+    padding: 16px 0
+// END FOOTER CSS
+
+// RESPONSIVE CSS 
+@media screen and (max-width: 991px)
+  br 
+    display: none !important
+  #header 
+    height: 60vh
+    max-height: 550px
+    min-height: 400px
+    .navigation 
+      .hot-line
+        font-size: 1rem
+    .title-banner 
+      width: 90%
+      h2
+        font-size: 2.5rem
+        margin-bottom: 20px
+      h3
+        font-size: 1.45rem
+        margin-bottom: 30px
+      p 
+        margin-bottom: 35px
+  .module
+    padding-top: 35px
+    .title-module
+      margin-bottom: 30px
+      h3,h4 
+        font-size: 1.5rem
+      p 
+        font-size: 1rem
+        margin-top: 20px
+    .tab-list 
+      .nav 
+        li 
+          a
+            font-size: 14px
+            line-height: 50px
+    .content 
+      margin-top: 35px
+      margin-bottom: 30px
+      .des-card
+        margin-top: 0
+        margin-left: 20px
+        > div 
+          margin-bottom: 20px
+          font-size: 14px
+        > button 
+          margin-top: 10px
+      .image-card
+        p 
+          margin-top: 20px
+    .content-module 
+      p
+        font-size: 14px
+        margin-top: 20px
+      figure
+        img
+          max-width: 50%
+    &.module-2 
+      padding-bottom: 30px
+      .title-module
+        margin-bottom: 30px
+      .content-card 
+        .gains
+          > div 
+            margin-bottom: 30px
+        .left-content
+          .gains 
+            > div
+              > div 
+                float: left !important
+              .des-gain
+                text-align: left
+    &.module-3
+      padding-top: 35px 
+      padding-bottom: 30px
+      .title-module
+        margin-bottom: 30px
+    &.module-4
+      .content-module
+        > button 
+          width: 200px 
+          height: 50px 
+          line-height: 50px
+          margin-top: 30px
+          font-size: 1rem
+    &.module-5
+      padding-top: 35px 
+      padding-bottom: 40px
+      .content-module 
+        .step 
+          h5
+            font-size: 1rem
+            &:before 
+              width: 15px 
+              height: 15px 
+              top: 30px
+            &:after 
+              border: 2px solid #999
+              top: 35px
+          > div 
+            margin-top: 40px
+            p
+              font-size: 14px
+  #footer 
+    .top-footer
+      padding-top: 35px 
+      padding-bottom: 40px
+      .title-footer
+        h3 
+          font-size: 1.5rem
+          margin-bottom: 25px
+        p 
+          font-size: 1rem
+        .button-group
+          margin-top: 30px
+          a, button 
+            width: 180px 
+            height: 50px 
+            line-height: 50px
+    .bot-footer
+      padding: 12px 0
+@media screen and (max-width: 767px)
+  #header 
+    height: 100vh
+    max-height: auto
+    min-height: auto
+    .navigation 
+      text-align: center
+      .logo
+        float: none
+        margin-top: 10px
+        img 
+          max-width: 120px
+      .hot-line
+        float: none
+        margin-top: 15px
+        font-size: 14px
+    .title-banner 
+      margin-top: 30px
+      h2
+        font-size: 24px
+      h3 
+        font-size: 18px
+        line-height: 1.4
+        margin-bottom: 20px
+      p 
+        font-size: 1rem
+        margin-bottom: 20px
+      a 
+        border-radius: 10px
+        height: 50px 
+        line-height: 50px 
+        width: 230px
+        font-size: 1rem
+  .module 
+    padding-top: 30px
+    .title-module 
+      margin-bottom: 30px
+      h3, h4
+        font-size: 18px
+      p 
+        margin-top: 15px
+        font-size: 15px
+    .tab-list 
+      padding: 10px 0
+      .nav 
+        li 
+          a
+            min-height: 50px 
+            line-height: 1.4
+            padding-top: 10px
+            margin-bottom: 5px
+    .content
+      margin-top: 25px
+      .image-card
+        margin-bottom: 20px
+        img 
+          display: inline-block
+      .des-card
+        > button 
+          display: block
+          margin-right: auto
+          margin-left: auto
+    .content-module 
+      p
+        margin-top: 15px
+        margin-bottom: 20px
+      figure 
+        img
+          max-width: 30%
+    &.module-2 
+      padding-top: 20px
+      padding-bottom: 40px
+      .title-module
+        margin-bottom: 20px
+      .content-card 
+        .left-content
+          margin-bottom: 20px
+        .gains  
+          img 
+            max-width: 50px
+          > div
+            margin-bottom: 20px
+            .des-gain 
+              min-height: 50px
+              p
+                padding-right: 15px !important
+                padding-left: 0 !important
+                font-size: 14px
+    &.module-3
+      padding-top: 25px
+      padding-bottom: 10px
+    &.module-4
+      .content-module 
+        p
+          margin-top: 15px 
+          margin-bottom: 25px
+        > button 
+          margin-top: 10px
+          width: 180px
+    &.module-5
+      padding-top: 30px 
+      padding-bottom: 30px
+      .content-module 
+        .step 
+          margin-bottom: 20px
+          h5
+            font-weight: bold
+            &:after,&:before 
+              display: none
+          > div   
+            margin-top: 10px
+            p 
+              margin-bottom: 0
+  #footer 
+    .top-footer 
+      padding-top: 30px 
+      padding-bottom: 30px
+      .title-footer 
+        h3
+          font-size: 18px
+          margin-bottom: 20px
+        p 
+          font-size: 14px
+        .button-group 
+          margin-top: 20px
+          a, button 
+            height: 45px 
+            line-height: 45px
+            font-size: 14px
+            margin-bottom: 20px
+          a
+            margin-bottom: 0
+// END RESPONSIVE CSS

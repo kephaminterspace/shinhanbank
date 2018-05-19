@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>SHINHANBANK</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=vietnamese" rel="stylesheet">
+    <link type="image/x-icon" href="{{ url_for('static', filename='images/favicon.ico')}}" rel="shortcut icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css')}}">
+  </head>
+  <body>
+    <header id="header">
+      <div class="container fix-padding">
+        <nav class="navigation clearfix" style=" margin-top:50px">
+          <div class="logo1 col-sm-6">
+          		<a class="pull-right" href="#"><img alt="..." src="{{ url_for('static', filename='images/shinhanbank.png')}}" title="SHINHANBANK"/></a>
+          </div>
+           <div class="logo1 col-sm-6">
+          		<a class="pull-left" href="#"><img alt="..." src="{{ url_for('static', filename='images/logo2.png')}}" title="SHINHANBANK"/></a>
+          </div>
+        </nav>
+          <article class="title-banner">
+                    <h2>mở thẻ SHINHANBANK tín dụng</h2>
+                    <h3>CÙNG TẬN HƯỞNG NGÀN ƯU ĐÃI HẤP DẪN VỚI<br>THẺ TÍN DỤNG SHINHANBANK</h3>
+                    <p style="margin-bottom: 0px;font-size: 28px;">* Hoàn phí thường niên</p>
+                    <p style="margin-bottom: 0px;font-size: 28px;">* Hoàn tiền khi chi tiêu</p>
+                    <p style="margin-bottom: 0px;font-size: 28px;">* Tặng vali du lịch cao cấp</p>
+                    <button class="active-popup" onclick="main.openForm()">mở thẻ ngay</button>
+          </article>
+      </div>
+      <div class="over"></div>
+    </header>
+    <!-- END HEADER -->
+
+    <main id="main">
+      <!-- END MODULE-1 -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active standard">
+          <section id="dieukiendangky" class="module module-4">
+            <div class="container">
+              <div class="title-module">
+                <h3>Điều kiện đăng ký</h3>
+                <h4>Dành cho chủ thẻ của SHINHANBANK</h4>
+              </div>
+              <div class="content-module">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-4">
+                    <figure>
+                      <img src="{{ url_for('static', filename='images/cake.png')}}" alt="image" class="img-responsive">
+                    </figure>
+                    <p>Từ 22 tuổi – 45 tuổi</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <figure>
+                      <img src="{{ url_for('static', filename='images/house.png')}}" alt="image" class="img-responsive">
+                    </figure>
+                    <p>Hộ khẩu và sinh sống tại Tp HCM <br/>hoặc Hà Nội</p>
+                  </div>
+                  <div class="col-xs-12 col-sm-4">
+                    <figure>
+                      <img src="{{ url_for('static', filename='images/wallet.png')}}" alt="image" class="img-responsive">
+                    </figure>
+                    <p>Lương chuyển khoản từ 7.1 triệu đồng, <br/>có HĐLĐ từ 12 tháng trở lên</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END MODULE-4 -->
+        </div>
+      </div>
+    </main>
+    <!-- END MAIN -->
+
+    <footer id="footer">
+      <section class="top-footer">
+        <div class="container">
+          <div class="title-footer">
+            <h3>CÓ HÀNG NGÀN <span>ƯU ĐÃI HẤP DẪN</span> ĐANG CHỜ BẠN</h3>
+            <p>SHINHANBANK cung cấp các loại Thẻ Tín Dụng phù hợp với phong cách sống của từng cá nhân. Hãy so sánh các tính năng của mỗi loại thẻ để có thể lựa chọn Thẻ Tín Dụng thích hợp.</p>
+            <div class="button-group">
+              <button class="active-popup" onclick="main.openForm()">mở thẻ ngay</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bot-footer">
+        <div class="container">
+          <p>Landingpage này thuộc quyền sở hữu của Accesstrade & Shinhanbank không có bất kỳ trách nhiệm pháp lý liên quan nào.</p>
+        </div>
+      </section>
+    </footer>
+    <!-- END FOOTER -->
+    <div class="popup">
+      <div class="over-play">
+        <form action="" class="popup-form" name="popup-form" >
+          <input id="aff_source" name="aff_source" type="hidden" value="">
+          <input id="aff_sid" name="aff_sid" type="hidden" value="">
+          <div class="close-popup" onclick="main.closeForm()">
+            <i class="fa fa-times" aria-hidden="true"></i>
+          </div>
+          <div class="des-form" style="text-align: center;">
+              <h2>Đăng ký ngay</h2>
+          </div>
+          <div class="has-error form-group">
+            <p class="help-block show-block-error"></p>
+          </div>
+
+          <div class="check-input">
+            <p>Bạn có nhận lương qua tài khoản ngân hàng không?</p>
+            <div class="alert-box box-0">
+              <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Vui lòng chọn một ô</span>
+            </div>
+            <div>
+              <input type="radio" name="check" value="Có nhận lương qua Bank" id="yes">
+              <label for="yes">Có</label>
+            </div>
+            <div>
+              <input type="radio" name="check" value="Không nhận lương qua Bank" id="no">
+              <label for="no">Không</label>
+            </div>
+          </div>
+
+          <div class="check-input">
+              <div class="check-input">
+                <p>Bạn có thẻ tín dụng của Shinhan Bank/ANZ chưa?</p>
+                <div class="alert-box box-1">
+                  <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Vui lòng chọn một ô</span>
+                </div>
+                <div>
+                  <input type="radio" name="card_shinhanbank" value="Có thẻ Shinhan Bank" id="yes1">
+                  <label for="yes1">Có</label>
+                </div>
+                <div>
+                  <input type="radio" name="card_shinhanbank" value="Chưa có thẻ Shinhan Bank" id="no1">
+                  <label for="no1">Chưa</label>
+                </div>
+              </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 my-input">
+              <div class="alert-box box-2">
+                <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Vui lòng nhập họ và tên</span>
+              </div>
+              <input type="text" name="fullName" placeholder="Họ và tên của bạn">
+            </div>
+          </div>
+
+          <div class="row">
+           <div class="col-xs-12 col-sm-12 my-input">
+              <div class="alert-box box-3-2">
+                <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Số điện thoại không hợp lệ</span>
+              </div>
+              <input type="text" name="phone" placeholder="Điện thoại liên hệ">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 my-input">
+              <div class="alert-box box-4-2">
+                <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Email không hợp lệ</span>
+              </div>
+              <input type="text" name="email" placeholder="Email của bạn">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 my-input">
+              <div class="alert-box box-5">
+                <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Vui lòng chọn khu vực sinh sống</span>
+              </div>
+              <select name="address" required>
+                <option value="" disabled selected hidden>Khu vực bạn đang sinh sống</option>
+                <option value="Hà Nội">Hà Nội</option>
+                <option value="Hồ Chí Minh">Hồ Chí Minh</option>
+                <option value="Khác">Khác</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 my-input">
+              <div class="alert-box box-6">
+                <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Vui lòng chọn mức lương</span>
+              </div>
+              <select name="money" required>
+                <option value="" disabled selected hidden>Mức lương</option>
+                <option value="Từ 7 đến dưới 12 triệu/tháng">Từ 7 đến dưới 12 triệu/tháng</option>
+                <option value="Từ 12 đến dưới 20 triệu/tháng">Từ 12 đến dưới 20 triệu/tháng</option>
+                <option value="Trên 20 triệu/tháng">Trên 20 triệu/tháng</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="last-check">
+            <div class="alert-box box-8">
+              <span class="arrow_box"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i>Vui lòng đọc và đồng ý với điều khoản</span>
+            </div>
+            <div>
+              <input type="checkbox" name="agree" checked="checked" id="agree"><label for="agree"><i class="fa fa-check"></i></label>
+            </div>
+            <p class="condition">Tôi xác nhận các thông tin được cung cấp trên đây là hoàn toàn chính xác và xác thực, tôi đồng ý rằng Ngân hàng TNHH MTV Shinhan Việt Nam có thể sử dụng các thông tin trên đây để liên hệ với tôi nhằm giới thiệu các sản phẩm, dịch vụ và chương trình khuyến mãi của Ngân hàng.</p>
+          </div>
+          <div class="submit-button">
+            <button type="button" id="button-submit" onclick="main.callApi()">Gửi</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- END POPUP -->
+
+    <script src="{{ url_for('static', filename='vendor/jQuery/jquery-3.1.1.min.js')}}"></script>
+    <script src="{{ url_for('static', filename='vendor/bootstrap-sass-3.3.7/js/bootstrap.min.js')}}"></script>
+    <script src="//cdn.accesstrade.vn/js/tracking.js" ></script>
+    <script src="{{ url_for('static', filename='js/utils.js')}}"></script>
+    <script src="{{ url_for('static', filename='js/main.js')}}"></script>
+  <script type="text/javascript">
+       AT.track();
+     function getCookie(cname) {
+                var name = cname + "=";
+                var ca = document.cookie.split(';');
+                for(var i = 0; i <ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') {
+                        c = c.substring(1);
+                    }
+                    if (c.indexOf(name) == 0) {
+                        return c.substring(name.length,c.length);
+                    }
+                }
+                return "";
+        }
+
+            $("#aff_source").val(getCookie("_aff_network"));
+            $("#aff_sid").val(getCookie("_aff_sid"));
+  </script>
+  </body>
+</html>
