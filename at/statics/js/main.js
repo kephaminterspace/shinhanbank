@@ -22,7 +22,7 @@ main.callApi = function() {
                     $(location).attr('href',url);
                 }else{
                     if(resp.data == 'user exits')
-                        $('.show-block-error').html( 'Người dùng này đã tồn tại' );
+                        $('.show-block-error').html( resp.message );
                     else
                         $('.show-block-error').html( 'Có lỗi xảy ra, mời bạn đăng ký lại' );
 
