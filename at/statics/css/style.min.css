@@ -8366,7 +8366,7 @@ body {
 
 @media screen and (max-width: 767px) {
     #header {
-        height: 105vh;
+        height: 120vh;
         max-height: auto;
         min-height: auto
     }
