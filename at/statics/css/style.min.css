@@ -7285,7 +7285,7 @@ button.close {
 .popup .over-play .popup-form {
     background: #fff;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     margin-left: auto;
     margin-right: auto;
     padding: 30px;
@@ -7481,7 +7481,7 @@ button.close {
 
 .popup .over-play .popup-form .last-check p {
     float: right;
-    max-width: 415px;
+    max-width: 515px;
     margin-top: 0;
     margin-bottom: 0;
     color: #666;
