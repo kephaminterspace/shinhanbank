@@ -7532,7 +7532,7 @@ button.close {
 @media screen and (max-width: 767px) {
     .popup .over-play .popup-form {
         padding: 10px 15px;
-        font-size: 14px
+        font-size: 12px
     }
 
     .popup .over-play .popup-form .des-form p {
@@ -8190,7 +8190,7 @@ body {
 
     #header {
         height: 60vh;
-        max-height: 550px;
+        max-height: 650px;
         min-height: 400px
     }
 
@@ -8366,7 +8366,7 @@ body {
 
 @media screen and (max-width: 767px) {
     #header {
-        height: 100vh;
+        height: 112vh;
         max-height: auto;
         min-height: auto
     }
@@ -8391,7 +8391,7 @@ body {
     }
 
     #header .title-banner {
-        margin-top: 30px
+        margin-top: 65px
     }
 
     #header .title-banner h2 {
