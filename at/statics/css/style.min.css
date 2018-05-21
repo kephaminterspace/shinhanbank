@@ -8366,7 +8366,7 @@ body {
 
 @media screen and (max-width: 767px) {
     #header {
-        height: 112vh;
+        height: 105vh;
         max-height: auto;
         min-height: auto
     }
@@ -8391,7 +8391,7 @@ body {
     }
 
     #header .title-banner {
-        margin-top: 65px
+        margin-top: 35px
     }
 
     #header .title-banner h2 {
